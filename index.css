@@ -1,0 +1,181 @@
+/* /* 清楚样式 */
+  * {
+    margin: 0;
+    padding: 0;
+  }
+   body {
+    font-size: 17px;
+    background: url(./pexels-s-migaj-747964.jpg) center no-repeat;
+    background-size: cover;
+    /* backdrop-filter: blur(2px);  */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  } 
+/* 主页盒子模型*/
+  #page {
+    margin: 0 auto;
+    max-width: 800px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  /* svg图标 */
+  .icon {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+  }
+
+  /* 搜索引擎动画 */
+  @keyframes engine-focus {
+    0% {
+      transform: translatey(0);
+    }
+    100% {
+      transform: translatey(20px);
+    }
+  }
+
+  /* 搜索栏盒子 */
+  #engine {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    /* border: 1px solid black; */
+    width: 400px;
+    height: 60px;
+  }
+  /* 搜索引擎的盒子模型 */
+  .search-engine {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 2px 0 rgba(255, 255, 255, .4);
+    border-radius: 8px;
+    height: 60px;
+    border-radius: 4px;
+    font-size: 20px;
+    background-color: rgba(255, 255, 255, .4);
+    backdrop-filter: blur(7px);
+    text-decoration: none;
+    color: rgba(0, 0, 0, .8);
+    padding: 0 10px;
+    transition: all 1s;
+    color: grey;
+  }
+  .search-engine:focus {
+    position: relative;
+    animation: engine-focus 1s forwards;
+    background-color: rgba(255, 255, 255, 1);
+    color: black;
+  }
+  .search-engine:nth-child(1) {
+    margin-right: 10px;
+  }
+  .search-engine:nth-child(2) {
+    margin-left: 10px;
+  }
+
+
+  /* 搜索框盒子 */
+  .search {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  .search-area {
+    margin-top: 20px;
+    width: 300px;
+    height: 30px;
+    border-radius: 999em;
+    border: none;
+    outline: none;
+    background-color: rgba(255, 255, 255, .4);
+    padding: 5px 38px 5px 20px;
+    transition: all .7s;
+  } 
+  .search-btn {
+    position: absolute;
+    right: 5px;
+    background-color: rgb(31, 214, 214);
+    border-radius: 50%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: all .7s;
+  }
+
+  .search-area:focus {
+    width: 800px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 1);
+  }
+  
+  .search-area:focus +.search-btn {
+    width: 50px;
+    height: 50px;
+  }
+  /* 网站导航 */
+  #websides {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+  }
+
+  #websides ul {
+    list-style: none;
+    width: 90%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  #websides ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all .6s;
+    background-color: rgba(255, 255, 255, .6);
+    border-radius: 8px;
+    box-shadow: 0 0 1px 0 rgba(151, 151, 151, 0.6);
+  }
+
+  #websides ul li:hover {
+    flex-shrink: 0;
+    font-size: 20px;
+    background-color: #fff;
+    box-shadow: 0 0  2px 1px #ccc;
+  }
+
+
+  #websides h2 {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    color: rgb(81, 81, 81);
+  }
+  .classify {
+    width: 29%;
+    border-radius: 6px;
+    background-color: rgba(255, 255, 255, .5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
